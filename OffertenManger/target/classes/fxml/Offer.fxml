@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="882.0" prefWidth="1177.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.ksba.offertenmanager.Controller.OfferController">
+   <children>
+      <ImageView fitHeight="804.0" fitWidth="1175.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/hintergrund_1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="819.0" fitWidth="1175.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/hintergrund_1.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="103.0" layoutY="225.0" prefHeight="385.0" prefWidth="198.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ComboBox fx:id="cmbClients" onAction="#getInfo" prefWidth="200.0" promptText="Clients" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black; -fx-text-fill: white;" />
+            <ComboBox fx:id="cmbProducts" onAction="#getInfo" prefWidth="200.0" promptText="Products" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black; -fx-text-fill: white;" GridPane.rowIndex="1" />
+            <TextField fx:id="txtQuantity" onAction="#getInfo" prefWidth="200.0" promptText="Quantity" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black; -fx-text-fill: black; -fx-prompt-text-fill: #323232;" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dateReception" onAction="#getInfo" prefHeight="26.0" prefWidth="200.0" promptText="Date" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black; -fx-prompt-text-fill: #323232;" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cmbPaymentterm" onAction="#getInfo" prefWidth="200.0" promptText="Payment term" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1 0;" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cmbPaymentmethod" onAction="#getInfo" prefWidth="200.0" promptText="Payment method" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black;" GridPane.rowIndex="5" />
+            <TextField fx:id="txtSalenotice" onAction="#getInfo" prefWidth="200.0" promptText="Notice Sale" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black; -fx-text-fill: #323232; -fx-prompt-text-fill: #323232;" GridPane.rowIndex="6" />
+            <TextField fx:id="txtConsulting" onAction="#getInfo" prefWidth="200.0" promptText="Notice Consulting" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black; -fx-text-fill: #323232; -fx-prompt-text-fill: #323232;" GridPane.rowIndex="7" />
+            <TextField fx:id="txtAdd" onAction="#getInfo" prefWidth="200.0" promptText="Notice Advertise" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black; -fx-text-fill: #323232; -fx-prompt-text-fill: #323232;" GridPane.rowIndex="8" />
+            <ComboBox fx:id="cmbSeller" onAction="#getInfo" prefWidth="200.0" promptText="Seller" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: black;" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+      <Label fx:id="lblOffertext" layoutX="569.0" layoutY="171.0" prefHeight="684.0" prefWidth="545.0" />
+      <Button fx:id="btnConfirm" layoutX="221.0" layoutY="756.0" mnemonicParsing="false" onAction="#btnSaveOffer" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font></Button>
+      <AnchorPane layoutY="100.0" prefHeight="10.0" prefWidth="1175.0" style="-fx-background-color: white;" />
+      <Label fx:id="lblTitelOffer" layoutX="56.0" layoutY="29.0" text="Create a offer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="75.0" layoutY="756.0" mnemonicParsing="false" onAction="#Switch2Selection" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblPreview" layoutX="746.0" layoutY="95.0" prefHeight="76.0" prefWidth="192.0" text="First Preview:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="529.0" layoutY="155.0" prefHeight="717.0" prefWidth="627.0" style="-fx-border-color: white;" />
+      <Label fx:id="lblMessaageSuccess" alignment="CENTER" layoutX="31.0" layoutY="645.0" prefHeight="69.0" prefWidth="380.0" text="Your PDF has been created and saved &#10;successfully under the name offer!" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

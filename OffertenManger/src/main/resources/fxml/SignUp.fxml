@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.ksba.offertenmanager.Controller.SignUpController">
+   <children>
+      <ImageView fitHeight="544.0" fitWidth="763.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/hintergrund_1.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtSellerName" layoutX="252.0" layoutY="193.0" />
+      <TextField fx:id="txtSellerFirstname" layoutX="550.0" layoutY="193.0" />
+      <TextField fx:id="txtSellerAdress" layoutX="251.0" layoutY="267.0" />
+      <TextField fx:id="txtSellerPostcode" layoutX="251.0" layoutY="303.0" />
+      <TextField fx:id="txtSellerPlace" layoutX="550.0" layoutY="303.0" />
+      <TextField fx:id="txtSellerDepartment" layoutX="252.0" layoutY="379.0" />
+      <Button fx:id="btnConfirm" layoutX="612.0" layoutY="457.0" mnemonicParsing="false" onAction="#btnSignUp" prefHeight="41.0" prefWidth="92.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font></Button>
+      <ComboBox fx:id="cmbSellerSalutation" layoutX="251.0" layoutY="154.0" prefWidth="150.0" />
+      <PasswordField fx:id="pwSellerPW" layoutX="251.0" layoutY="413.0" />
+      <PasswordField fx:id="pwSellerConfirmPW" layoutX="252.0" layoutY="445.0" />
+      <Label fx:id="message" layoutX="464.0" layoutY="408.0" prefHeight="17.0" prefWidth="202.0" text="." />
+      <TextField fx:id="txtusername" layoutX="251.0" layoutY="113.0" />
+      <AnchorPane layoutY="79.0" prefHeight="7.0" prefWidth="763.0" style="-fx-background-color: white;" />
+      <Label fx:id="lblTitelSignUp" layoutX="73.0" layoutY="14.0" prefHeight="59.0" prefWidth="123.0" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="504.0" layoutY="457.0" mnemonicParsing="false" onAction="#Switch2Login" prefHeight="41.0" prefWidth="92.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </Button>
+      <GridPane alignment="CENTER_RIGHT" layoutX="73.0" layoutY="102.0" prefHeight="380.0" prefWidth="160.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="lblUsername" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="171.0" text="username">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSalutation" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="171.0" text="salutation" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="173.0" text="surname" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAdress" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="189.0" text="adress" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPostalcode" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="165.0" text="zipcode" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDepartment" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="174.0" text="department" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPassword" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="159.0" text="password" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPasswordConfirm" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="192.0" text="confirm password" GridPane.rowIndex="9">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane alignment="CENTER_RIGHT" layoutX="464.0" layoutY="102.0" prefHeight="380.0" prefWidth="100.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="lblFirstname" prefHeight="19.0" prefWidth="152.0" text="firstname" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPlace" prefHeight="19.0" prefWidth="130.0" text="city" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

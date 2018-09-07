@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="737.0" style="-fx-background-color: #13105F;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.ksba.offertenmanager.Controller.LoginController">
+   <children>
+      <ImageView fitHeight="518.0" fitWidth="758.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/hintergrund_1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="587.0" layoutY="61.0" prefHeight="57.0" prefWidth="60.0" />
+      <AnchorPane layoutX="416.0" layoutY="138.0" prefHeight="320.0" prefWidth="321.0" style="-fx-background-color: A5B0BC;">
+         <children>
+            <TextField fx:id="txtusername" layoutX="86.0" layoutY="100.0" />
+            <PasswordField fx:id="txtpassword" layoutX="86.0" layoutY="135.0" />
+            <Button fx:id="btnRegister" layoutX="55.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnSignUp" prefHeight="17.0" prefWidth="211.0" style="-fx-background-color: white;" text="Sign Up">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnLogin" defaultButton="true" layoutX="55.0" layoutY="198.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="211.0" style="-fx-border-radius: 12; -fx-background-color: lightblue;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="91.0" fitWidth="50.0" layoutX="135.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/IconLogin.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblTitel" layoutX="88.0" layoutY="21.0" text="Create a offer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" layoutX="379.0" layoutY="491.0" prefHeight="17.0" prefWidth="202.0" text="." />
+     
+               
+      
+            <AnchorPane layoutX="370.0" layoutY="35.0" prefHeight="448.0" prefWidth="9.0" style="-fx-background-color: white;" />
+      <Label fx:id="lblTitelLogin" alignment="CENTER" layoutX="479.0" layoutY="72.0" prefHeight="36.0" prefWidth="196.0" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWelcome" alignment="CENTER" layoutX="14.0" layoutY="154.0" text="Welcome!&#10;&#10;This is a program that creates an offer&#10;for you. With this program, you are&#10;much faster and more efficient.&#10;It's a very efficient way to manage your customers.&#10;&#10;Have a good time!&#10;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
