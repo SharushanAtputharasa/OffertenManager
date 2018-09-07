@@ -20,7 +20,7 @@
             <Image url="@../Images/hintergrund_1.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="819.0" fitWidth="1175.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="819.0" fitWidth="1175.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/hintergrund_1.jpg" />
          </image>
@@ -76,9 +76,9 @@
          </font>
       </Label>
       <Label layoutX="529.0" layoutY="155.0" prefHeight="717.0" prefWidth="627.0" style="-fx-border-color: white;" />
-      <Label fx:id="lblMessaageSuccess" alignment="CENTER" layoutX="31.0" layoutY="645.0" prefHeight="69.0" prefWidth="380.0" text="Your PDF has been created and saved &#10;successfully under the name offer!" textAlignment="CENTER" textFill="WHITE" visible="false">
+      <Label fx:id="lblMessaageSuccess" alignment="CENTER" layoutX="31.0" layoutY="631.0" prefHeight="114.0" prefWidth="380.0" text="Your PDF has been created &#10;and saved successfully under &#10;the name &quot;generated_offer&quot;!" textAlignment="CENTER" textFill="WHITE" visible="false">
          <font>
-            <Font name="System Bold Italic" size="20.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
    </children>

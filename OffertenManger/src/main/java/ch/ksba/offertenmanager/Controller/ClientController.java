@@ -32,54 +32,25 @@ import javafx.stage.Stage;
 public class ClientController implements Initializable {
 
     @FXML
-    private TextField txtcompanyname;
-    @FXML
-    private TextField txtname;
-    @FXML
-    private TextField txtfirstname;
-    @FXML
-    private TextField txtadress;
-    @FXML
-    private TextField txtpostcode;
-    @FXML
-    private TextField txtplace;
+    private TextField txtcompanyname, txtname, txtfirstname, txtadress, txtpostcode, txtplace;
     @FXML
     private ComboBox<String> cmbSalutation;
     @FXML
-    private Button btnaddClient;
+    private Button btnaddClient, btnBack;
     @FXML
-    private Label message;
-    @FXML
-    private Label lblCompanyname;
-    @FXML
-    private Label lblSalutationClient;
-    @FXML
-    private Label lblNameClient;
-    @FXML
-    private Label lblFirstnameClient;
-    @FXML
-    private Label lblAdressClient;
-    @FXML
-    private Label lblPostalCodeClient;
-    @FXML
-    private Label lblPlaceClient;
-    @FXML
-    private Button btnBack;
-    @FXML
-    private Label lblTitelClient;
+    private Label message, lblCompanyname, lblSalutationClient, lblNameClient, lblFirstnameClient, lblAdressClient, lblPostalCodeClient, lblPlaceClient, lblTitelClient;
 
     private Stage stage;
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         stage = MainApp.getStage();
-        
+
         ObservableList<String> cmbFiller = FXCollections.observableArrayList();
         cmbFiller.addAll("Mister", "Madame");
         cmbSalutation.setItems(cmbFiller);
-        
+
     }
 
     @FXML

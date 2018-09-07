@@ -48,38 +48,12 @@ public class OfferController implements Initializable {
 
     public static final String DEST = "results/chapter01/HelloWorld.pdf";
 
-    @FXML
-    private ComboBox<String> cmbClients;
-    @FXML
-    private ComboBox<String> cmbProducts;
-    @FXML
-    private TextField txtQuantity;
-    @FXML
-    private DatePicker dateReception;
-    @FXML
-    private ComboBox<String> cmbPaymentterm;
-    @FXML
-    private ComboBox<String> cmbPaymentmethod;
-    @FXML
-    private TextField txtSalenotice;
-    @FXML
-    private TextField txtConsulting;
-    @FXML
-    private TextField txtAdd;
-    @FXML
-    private ComboBox<String> cmbSeller;
-    @FXML
-    private Label lblOffertext;
-    @FXML
-    private Label lblMessaageSuccess;
-    @FXML
-    private Label lblTitelOffer;
-    @FXML
-    private Button btnConfirm;
-    @FXML
-    private Button btnBack;
-    @FXML
-    private Label lblPreview;
+    @FXML private ComboBox<String> cmbClients, cmbProducts, cmbPaymentterm, cmbPaymentmethod, cmbSeller;
+    @FXML private TextField txtQuantity, txtSalenotice, txtConsulting, txtAdd;
+    @FXML private DatePicker dateReception;
+    @FXML private Label lblOffertext, lblMessaageSuccess, lblTitelOffer, lblPreview;
+    @FXML private Button btnConfirm, btnBack;
+  
 
     private String Companyname = "<Companyname>",
             Firstname = "<Firstname>",
@@ -124,7 +98,7 @@ public class OfferController implements Initializable {
         cmbPaymentmethod.setItems(comboBoxInputs);
 
         ObservableList<String> comboBoxInputs2 = FXCollections.observableArrayList();
-        comboBoxInputs2.addAll("30", "01");
+        comboBoxInputs2.addAll("15", "30");
         cmbPaymentterm.setItems(comboBoxInputs2);
 
         createOffer();
@@ -210,21 +184,20 @@ public class OfferController implements Initializable {
         offertenText += "  We have received your request from" + " " + Termin1 + "  " + "and we thank you very much." + "\n";
         offertenText += "  We are pleased to submit the following offer." + "\n\n";
 
-        offertenText += "  " + aaa + "      " + Productname + "      " + Pricetotal + " CHF " + " " + "8%" + "\n\n";
+        offertenText += "  " + aaa + "      " + Productname + "      " + Pricetotal + " CHF " + " " + "\n\n";
 
-        offertenText += "  We offer you the " + Productname + " at the price of " + price + " CHF each, including " + "8%" + " VAT .\n"
+        offertenText += "  We offer you the " + Productname + " at the price of " + price + " CHF each, including " + "8%" + " Tax .\n"
                 + "  In addition, you can benefit from a special discount of " + bbb + " % for any order that is higher than " + Sales + " CHF." + "\n\n";
 
         offertenText += "  We promise to deliver the order within 7 days." + "\n" + "  The payment period is " + Paymentterm + " days after receipt of goods." + "\n"
                 + "  Please pay with " + Paymentmethod + " This offer is valid until " + Termin1 + "." + "\n\n  ";
 
         offertenText += Saleadvice + "\n\n  ";
-        offertenText += Consulting;
-
-        offertenText += Advertise;
+        offertenText += Consulting + "\n  ";
+        offertenText += ""+ Advertise + "\n\n  ";
 
         offertenText += "If you still have any questions, please do not hesitate to contact us." + "\n\n  ";
-        offertenText += "Sincerely " + Salutation + "\n\n  ";
+        offertenText += "Sincerely " + "\n\n  ";
 
         offertenText += Seller;
 
@@ -241,7 +214,7 @@ public class OfferController implements Initializable {
 
         String offertenTextPDF = "";
 
-        offertenTextPDF += "   VIN de Lausanne SA <br>" + "   3, Rue de la Piquette <br>   2000 Lausanne<br><br>";
+        offertenTextPDF += "  " + " VIN de Lausanne SA <br>" + "   3, Rue de la Piquette <br>   2000 Lausanne<br><br>";
         offertenTextPDF += "  " + Companyname + "<br>  " + Lastname + " " + Firstname + "<br>  " + Adress + "<br>  " + Postcode + " " + Place + "<br><br><br><br>";
         offertenTextPDF += "  Lausanne, " + Autodate + "<br><br>";
         offertenTextPDF += "  Offer for  " + Productname + "<br><br>";
@@ -250,12 +223,12 @@ public class OfferController implements Initializable {
         offertenTextPDF += "  We have received your request from" + " " + Termin1 + "  " + "and we thank you very much." + "<br>";
         offertenTextPDF += "   We are pleased to submit the following offer." + "<br><br>";
 
-        offertenTextPDF += "  " + aaa + "      " + Productname + "      " + Pricetotal + " CHF" + "      " + "8%" + "<br><br>";
+        offertenTextPDF += "  " + aaa + "      " + Productname + "      " + Pricetotal + " CHF " + "      " + "8% " + "<br><br>";
 
-        offertenTextPDF += "   We offer you the " + Productname + " at the price of " + price + "CHF each, including" + "8%" + "Tax." + "<br>"
-                + "  In addition, you can benefit from a special discount of " + bbb + " % for any order that is higher than" + "<br>" + Sales + " CHF." + "<br><br>";
+        offertenTextPDF += "   We offer you the " + Productname + " at the price of " + price + "CHF each, including " + "8%" + " Tax." + "<br>"
+                + "  In addition, you can benefit from a special discount of " + bbb + " % for any order that is higher than" + "<br>" +"  "+ Sales + " CHF." + "<br><br>";
 
-        offertenTextPDF += "  We promise to deliver the order within 7 days." + "\n" + "   The payment period is  " + Paymentterm + " jours" + " " + " days after receipt of goods." + "\n"
+        offertenTextPDF += "  We promise to deliver the order within 7 days." + "\n" + "   The payment period is  " + Paymentterm + " jours" + " " + " days after receipt of "+"goods." + "\n"
                 + "  Please pay with " + Paymentmethod + " This offer is valid until" + Termin1 + "." + "\n\n  ";
 
         offertenTextPDF += Saleadvice + "<br><br>  ";
@@ -264,7 +237,7 @@ public class OfferController implements Initializable {
         offertenTextPDF += Advertise;
 
         offertenTextPDF += "" + " If you still have any questions, please do not hesitate to contact us." + "<br><br>  ";
-        offertenTextPDF += "  Sincerely " + Salutation + "<br><br>  ";
+        offertenTextPDF += "  Sincerely " + Salutation + "<br><br><br>  ";
 
         offertenTextPDF += Seller;
 
@@ -277,7 +250,7 @@ public class OfferController implements Initializable {
 
         Document document = new Document(PageSize.A4);
 
-        PdfWriter.getInstance(document, new FileOutputStream("offre.pdf"));
+        PdfWriter.getInstance(document, new FileOutputStream("generated_offer.pdf"));
 
         document.open();
 

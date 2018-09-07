@@ -290,7 +290,6 @@ public class Database {
 
             JSONObject obj = new JSONObject(rd.readLine());
             if (obj.getInt("status") == 200) {
-                System.out.println("fehler in der API");
                 produkt = obj.getJSONObject("produkt");
             }
             return produkt;

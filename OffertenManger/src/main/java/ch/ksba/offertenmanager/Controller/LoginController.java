@@ -32,25 +32,12 @@ import javafx.stage.Stage;
  */
 public class LoginController implements Initializable {
 
-    @FXML
-    private TextField txtusername;
-    @FXML
-    private PasswordField txtpassword;
-    @FXML
-    private Button btnLogin;
-    @FXML
-    private Label message;
-    @FXML
-    private Label lblTitel;
-    @FXML
-    private Label lblTitelLogin;
-    @FXML
-    private Label lblWelcome;
-    @FXML
-    private Button btnRegister;
-
+    @FXML private TextField txtusername;
+    @FXML private PasswordField txtpassword;
+    @FXML private Button btnLogin, btnRegister;
+    @FXML private Label message, lblTitel, lblTitelLogin, lblWelcome;
+    
     private Stage stage;
-
 
     /**
      * Initializes the controller class.
@@ -68,6 +55,7 @@ public class LoginController implements Initializable {
     }
 
     public void handleLogin() {
+
         try {
             if (Database.getInstance().check(txtusername.getText().trim(), txtpassword.getText().trim())) {
 

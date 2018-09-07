@@ -31,18 +31,22 @@ import javafx.stage.Stage;
  * @author sharu
  */
 public class SignUpController implements Initializable {
-    
-    @FXML private TextField txtSellerName, txtSellerFirstname, txtSellerAdress, txtSellerPostcode, txtSellerPlace, txtSellerDepartment, txtusername;
-    @FXML private ComboBox<String> cmbSellerSalutation;
-    @FXML private PasswordField pwSellerPW, pwSellerConfirmPW;
-    @FXML private Label message, lblName, lblFirstname, lblSalutation, lblAdress, lblPostalcode, lblPlace, lblDepartment, lblPassword, lblPasswordConfirm, lblUsername, lblTitelSignUp;
-    @FXML private Button btnConfirm, btnBack;
+
+    @FXML
+    private TextField txtSellerName, txtSellerFirstname, txtSellerAdress, txtSellerPostcode, txtSellerPlace, txtSellerDepartment, txtusername;
+    @FXML
+    private ComboBox<String> cmbSellerSalutation;
+    @FXML
+    private PasswordField pwSellerPW, pwSellerConfirmPW;
+    @FXML
+    private Label message, lblName, lblFirstname, lblSalutation, lblAdress, lblPostalcode, lblPlace, lblDepartment, lblPassword, lblPasswordConfirm, lblUsername, lblTitelSignUp;
+    @FXML
+    private Button btnConfirm, btnBack;
 
     private Stage stage;
 
     private String male;
     private String female;
-
 
     /**
      * Initializes the controller class.
@@ -51,7 +55,7 @@ public class SignUpController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         stage = MainApp.getStage();
-       
+
         ObservableList<String> cmbFiller = FXCollections.observableArrayList();
         cmbFiller.addAll("Mister", "Madame");
         cmbSellerSalutation.setItems(cmbFiller);
@@ -59,6 +63,7 @@ public class SignUpController implements Initializable {
 
     @FXML
     private void btnSignUp(ActionEvent event) throws IOException {
+        
         if (txtusername.getText().trim().isEmpty() || cmbSellerSalutation.getSelectionModel().getSelectedItem().toString().trim().isEmpty() || txtSellerFirstname.getText().trim().isEmpty() || txtSellerName.getText().trim().isEmpty() || txtSellerAdress.getText().trim().isEmpty()
                 || txtSellerPostcode.getText().trim().isEmpty() || txtSellerPlace.getText().trim().isEmpty() || txtSellerDepartment.getText().trim().isEmpty() || pwSellerPW.getText().trim().isEmpty() || pwSellerConfirmPW.getText().trim().isEmpty()) {
             message.setText("Alle felder müssen gefüllt sein");
@@ -69,7 +74,7 @@ public class SignUpController implements Initializable {
 
         } else {
             Database.getInstance().Register(txtusername.getText(), cmbSellerSalutation.getSelectionModel().getSelectedItem().toString(), txtSellerFirstname.getText(), txtSellerName.getText(), txtSellerAdress.getText(),
-                     Integer.parseInt(txtSellerPostcode.getText()), txtSellerPlace.getText(), txtSellerDepartment.getText(), pwSellerPW.getText());
+                    Integer.parseInt(txtSellerPostcode.getText()), txtSellerPlace.getText(), txtSellerDepartment.getText(), pwSellerPW.getText());
 
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/Selection.fxml"));
             Scene scene = new Scene(root);

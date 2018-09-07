@@ -52,7 +52,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="lblWelcome" alignment="CENTER" layoutX="14.0" layoutY="154.0" text="Welcome!&#10;&#10;This is a program that creates an offer&#10;for you. With this program, you are&#10;much faster and more efficient.&#10;It's a very efficient way to manage your customers.&#10;&#10;Have a good time!&#10;" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="lblWelcome" alignment="CENTER" layoutX="44.0" layoutY="156.0" text="Welcome!&#10;&#10;This is a program that creates an offer&#10;for you. With this program, you are&#10;much faster and more efficient.&#10;It's a very efficient way to manage &#10;your customers.&#10;&#10;Have a good time!&#10;" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

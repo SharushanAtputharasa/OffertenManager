@@ -28,30 +28,12 @@ import javafx.stage.Stage;
  */
 public class ProductController implements Initializable {
 
-    @FXML
-    private TextField txtproductname;
-    @FXML
-    private TextField txtproducttype;
-    @FXML
-    private TextField txtunitprice;
-    @FXML
-    private Button btnaddProduct;
-    @FXML
-    private Label message;
-    @FXML
-    private Label lblProductname;
-    @FXML
-    private Label lblProducttype;
-    @FXML
-    private Label lblProductprice;
-    @FXML
-    private Label lblTitelProduct;
-    @FXML
-    private Button btnBack;
+    @FXML private TextField txtproductname, txtproducttype, txtunitprice;
+    @FXML private Button btnaddProduct, btnBack;
+    @FXML private Label message, lblProductname, lblProducttype, lblProductprice, lblTitelProduct;
 
     private Stage stage;
 
-    private String selectedEnglish = "english";
 
     /**
      * Initializes the controller class.
