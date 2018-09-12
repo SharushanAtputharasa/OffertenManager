@@ -6,6 +6,9 @@ aufgabaut sein. Dazu muss der Benutzer gewisse Elemente wie Produkt, Kunde, Zahl
 
 Dafür habe ich eine Datenbank implementiert, damit der Benutzer in der Lage sein kann selbst einen Produkt und eine Kunde hinzuzufügen. Diese werden auf der Datenbank abgespeichert. Die Daten werden dann von der Datenbank abgerufen und sind für der Generierung der Offerte in einer Dropdown-Menu auswählbar.
 
+# Live Demo
+Go to the File OffertenManager/target/...JAR
+
 
 # Reflexion
 Mir hat das Projekt sehr viel Spass gemacht. Ich habe auch viel neues dazu gelernt, wie zum Beispiel das Interagieren von Java und der Datenbank. Ich hatte einige Schwierigkeiten bei der Funktion, in der ich die Offerte als eine PDF Datei abspeichern wollte. Schlussendlich
