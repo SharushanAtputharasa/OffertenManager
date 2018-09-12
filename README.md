@@ -7,7 +7,7 @@ aufgabaut sein. Dazu muss der Benutzer gewisse Elemente wie Produkt, Kunde, Zahl
 Dafür habe ich eine Datenbank implementiert, damit der Benutzer in der Lage sein kann selbst einen Produkt und eine Kunde hinzuzufügen. Diese werden auf der Datenbank abgespeichert. Die Daten werden dann von der Datenbank abgerufen und sind für der Generierung der Offerte in einer Dropdown-Menu auswählbar.
 
 # Live Demo
-Go to the File OffertenManager/target/...JAR
+Laden Sie sich das Jar-File, unter "OffertenManager/target/OffertenManger2-1.0-SNAPSHOT.jar" herunter.
 
 
 # Reflexion
